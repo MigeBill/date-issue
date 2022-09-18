@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.css';
+import React from 'react'
+import '@aws-amplify/ui-react/styles.css'
+import { View, Text, TextField} from '@aws-amplify/ui-react';
+
+
+
+
+export function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <View>
+        <Text variation='primary'>amplify textfield date</Text>
+        <TextField type='date' label=''></TextField>
+
+        <Text>html input date</Text>
+        <input type='date'></input>              
+
+      </View>
+
   );
+
 }
 
-export default App;
+export default App
