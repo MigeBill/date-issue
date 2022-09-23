@@ -1,25 +1,34 @@
 
 import './App.css';
 import React from 'react'
-import '@aws-amplify/ui-react/styles.css'
-import { View, Text, TextField} from '@aws-amplify/ui-react';
-
+import { ThemeProvider, defaultDarkModeOverride, Heading, Card, Text, TextField } from '@aws-amplify/ui-react';
 
 
 
 export function App() {
 
+
+  const theme = {
+    name: 'dark-theme',
+    overrides: [defaultDarkModeOverride],
+  };
+
+
+
+
   return (
 
-      <View>
-        <Text variation='primary'>amplify textfield date</Text>
+
+    <ThemeProvider theme={theme} colorMode='dark'>
+      <Card>
+        <Heading level={1}>Date field behaviour</Heading>
+        <Text variation='error'>amplify textfield date</Text>
         <TextField type='date' label=''></TextField>
 
-        <Text>html input date</Text>
-        <input type='date'></input>              
-
-      </View>
-
+        <Text variation='warning'>html input date</Text>
+        <input type='date'></input>
+      </Card>
+    </ThemeProvider>
   );
 
 }
