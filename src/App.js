@@ -23,7 +23,7 @@ export function App() {
       <Card>
         <Heading level={1}>Date field behaviour</Heading>
         <Text variation='error'>amplify textfield date</Text>
-        <TextField type='date' label=''></TextField>
+        <TextField className='broken' type='date' label=''></TextField>
 
         <Text variation='warning'>html input date</Text>
         <input type='date'></input>
