@@ -37,6 +37,6 @@
   }
 }
 
-.broken {
-  display: inline-flex
+input[type='date'] {
+  display: inline-flex;
 }
